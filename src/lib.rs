@@ -6,6 +6,7 @@ mod problem_202;
 mod problem_26;
 mod problem_20;
 mod problem_50;
+mod problem_41;
 
 #[cfg(test)]
 mod tests {
@@ -26,7 +27,7 @@ mod tests {
     #[test]
     fn test() {
         let x: f64 = 2.0;
-        let res = problem_50::Solution::my_pow(x, -2147483648);
-        assert_eq!(res, x.powi(-2147483648))
+        let res = problem_41::Solution::first_missing_positive(vec![1, 2, 0]);
+        assert_eq!(res, 3)
     }
 }
