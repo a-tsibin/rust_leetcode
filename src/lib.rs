@@ -7,6 +7,7 @@ mod problem_26;
 mod problem_20;
 mod problem_50;
 mod problem_41;
+mod problem_42;
 
 #[cfg(test)]
 mod tests {
@@ -16,12 +17,12 @@ mod tests {
 
     #[test]
     fn generate_data() {
-        for _ in 0..100 {
-            let rand_float: f64 = thread_rng().gen_range(-100.0..100.0);
-            let rand_int: i32 = thread_rng().gen_range(-3..3);
-            println!("{}", rand_float);
-            println!("{}", rand_int);
-        }
+        let mut rng = thread_rng();
+        (0..10000).map(|_| {
+            let h = rng.gen_range(0..100000);
+            print!("{},", h);
+            h
+        }).collect::<Vec<i32>>();
     }
 
     #[test]
