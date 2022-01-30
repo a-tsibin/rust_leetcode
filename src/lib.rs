@@ -8,6 +8,7 @@ mod problem_20;
 mod problem_50;
 mod problem_41;
 mod problem_42;
+mod problem_9;
 
 #[cfg(test)]
 mod tests {
