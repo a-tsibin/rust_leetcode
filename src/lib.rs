@@ -9,6 +9,7 @@ mod problem_50;
 mod problem_41;
 mod problem_42;
 mod problem_9;
+mod problem_295;
 
 #[cfg(test)]
 mod tests {
