@@ -1,15 +1,6 @@
-mod problem_2;
-mod problem_7;
-mod problem_3;
-mod problem_35;
-mod problem_202;
-mod problem_26;
-mod problem_20;
-mod problem_50;
-mod problem_41;
-mod problem_42;
-mod problem_9;
-mod problem_295;
+mod medium;
+mod hard;
+mod easy;
 
 #[cfg(test)]
 mod tests {
