@@ -2,6 +2,8 @@ mod medium;
 mod hard;
 mod easy;
 
+use crate::hard::problem_239;
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -11,8 +13,8 @@ mod tests {
     #[test]
     fn generate_data() {
         let mut rng = thread_rng();
-        (0..10000).map(|_| {
-            let h = rng.gen_range(0..100000);
+        (0..100000).map(|_| {
+            let h = rng.gen_range(-10000..10000);
             print!("{},", h);
             h
         }).collect::<Vec<i32>>();
@@ -20,8 +22,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let x: f64 = 2.0;
-        let res = problem_41::Solution::first_missing_positive(vec![1, 2, 0]);
-        assert_eq!(res, 3)
+        let res = problem_239::Solution::max_sliding_window(vec![1, 3, -1, -3, 5, 3, 6, 7], 3);
+        assert_eq!(res, vec![3, 3, 5, 5, 6, 7])
     }
 }
